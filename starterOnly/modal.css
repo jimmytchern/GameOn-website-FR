@@ -72,6 +72,12 @@ img {
 .topnav .icon {
   display: none;
 }
+/*Media screen pour Ipad et IpadMini */
+@media screen and (min-width: 841px) and (max-width: 1110px) {
+  .topnav {
+    flex-direction: column;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .topnav a {
@@ -83,32 +89,85 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
+/* media querry pour Mobile */
+@media screen and (max-width: 840px) {
+  /*Before : 768px*/
+
+  .header-logo {
+    position: relative;
+  }
+  .topnav {
+    height: 70px;
+    align-items: flex-start;
+  }
+
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    color: red;
+    margin-top: 0px;
+  }
+  .topnav a:hover.icon {
+    color: #ffffff;
+  }
+
   .topnav.responsive {
     position: relative;
+    align-items: flex-start;
+    max-height: 70px;
+    z-index: 99;
+  }
+  .topnav.responsive .main-navbar {
+    position: relative;
+    right: 50px;
+    padding-right: 20px;
   }
   .topnav.responsive .icon {
     position: absolute;
-    right: 0;
+    right: -50px;
     top: 0;
   }
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
+    right: 50px;
+  }
+
+  .topnav.responsive + main {
+    opacity: 0.3;
   }
 }
 
-@media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
-  }
+/*  media querry pour la taille de l'icon menu, sur iphone 8 et 8+  */
+@media screen and (min-width: 370px) and (max-width: 840px) {
   .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
+    font-size: 40px;
   }
 }
+
+/*media querry pour iphone SE */
+@media screen and (max-width: 370px) {
+  .topnav a.icon {
+    font-size: 30px;
+    margin-top: 10px;
+    padding-right: 0px;
+  }
+  .topnav.responsive .icon {
+    right: -40px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header-logo {
+    max-width: 150px;
+    margin-top: 15px;
+  }
+}
+
 /*--------------------------------------------------------MODAL-----------------------------------------------------*/
 main {
   font-size: 130%;
@@ -539,6 +598,7 @@ footer {
   .hero-text {
     width: unset;
     font-size: 1.5rem;
+    text-align: center;
   }
   .hero-img img {
     border-radius: 10px;
@@ -551,6 +611,17 @@ footer {
   }
   .copyrights {
     margin-top: 50px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 430px) {
+  .hero-content {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 0px;
+  }
+  .hero-headline {
+    font-size: 3rem;
     text-align: center;
   }
 }
