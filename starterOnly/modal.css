@@ -31,7 +31,7 @@ img {
 }
 
 .topnav {
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin: 3.5%;
   display: flex;
   flex-direction: row;
@@ -109,7 +109,7 @@ img {
     margin-top: -15px;
   }
 }
-
+/*--------------------------------------------------------MODAL-----------------------------------------------------*/
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -163,6 +163,7 @@ main {
   border-radius: 15px;
   cursor: pointer;
   font-size: 16px;
+  display: block;
 }
 
 .button:hover {
@@ -173,7 +174,9 @@ main {
   font-size: 16px;
 }
 
-.bground {
+/*AJOUT CODE*/
+.bground,
+.bground2 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -198,10 +201,20 @@ main {
   color: #fff;
   padding-top: 10px;
 }
+.content2 {
+  height: 760px;
+  padding-top: 250px;
+}
 
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+}
+.modal-body2 {
+  text-align: center;
+}
+.button-close {
+  margin-top: 300px;
 }
 
 label {
@@ -438,6 +451,7 @@ input[data-error]::after {
   text-align: left;
   min-width: 424px;
 }
+/*
 .hero-content::after {
   content: "";
   width: 100%;
@@ -446,7 +460,7 @@ input[data-error]::after {
   position: absolute;
   right: -80px;
   top: 0;
-}
+} */
 .hero-content > * {
   position: relative;
   z-index: 1;
@@ -461,6 +475,14 @@ input[data-error]::after {
   font-weight: normal;
   margin-top: 57px;
   padding: 0;
+}
+.button {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.modal-body {
+  margin-bottom: 50px;
 }
 .btn-signup {
   outline: none;
